@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join Layout</title>
+  <style>
+    header {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: #666;
+      height: 280px;
+      padding: 20px;
+      font-size: 35px;
+      color: white;
+    }
+
+    #primary {
+      float: left;
+      width: 10%;
+      height: 730px;
+      background-color: rgb(224, 224, 224);
+      border-bottom-left-radius: 10px;
+    }
+
+    #content {
+      float: left;
+      width: 80%;
+      height: 730px;
+      background-color: rgb(146, 146, 146);
+    }
+
+    #form {
+      width: 85%;
+      height: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: whitesmoke;
+    }
+
+    #secondary {
+      float: left;
+      width: 10%;
+      height: 730px;
+      background-color: rgb(224, 224, 224);
+      border-bottom-right-radius: 10px;
+    }
+
+    body {
+      background-color: rgb(182, 182, 182);
+    }
+
+    .base {
+      max-width: auto;
+      height: 920px;
+      margin: 20px;
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+
+    h2 {
+      margin-top: 150px;
+      margin-left: 300px;
+      width: 200px;
+    }
+
+    #join {
+      text-align: center;
+      height: 40px;
+      width: 100px;
+    }
+
+    #user-form {
+      text-align: left;
+      padding: 20px;
+    }
+
+    #user-form>input[type="text"] {
+      height: 30px;
+      width: 150px;
+    }
+
+    span {
+      display: inline-block;
+      width: 100px;
+      text-align: right;
+      padding-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="base">
+    <header>
+      <h2>O-Look</h2>
+    </header>
+    <div id="primary"></div>
+    <div id="content">
+      <div id="form">
+        <div>
+          <form id="user-form">
+            <br><br><br>
+            <span>성별</span>
+            <label> 남 <input id="man" type="radio" name="gender" value="남" checked></label>
+            <label> 여 <input id="woman" type="radio" name="gender" value="여"></label>
+            <br><br><br>
+            <span>직업</span>
+            <input id="job" type="text" list="career">
+            <datalist id='career'>
+              <option value="학생"></option>
+              <option value="회사원"></option>
+            </datalist>
+            <br><br><br>
+            <span>나이</span>
+            <input id="age" type="text">
+            <br><br><br>
+            <span>키</span>
+            <input id="height" type="text">
+            <span>몸무게</span>
+            <input id="weight" type="text">
+            <br><br><br>
+            <button id='join' type="submit">회원가입</button>
+          </form>
+        </div>
+        <br>
+      </div>
+    </div>
+    <div id="secondary"></div>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/sequelize.js"></script>
+</body>
+
+</html>
