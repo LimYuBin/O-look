@@ -1,0 +1,38 @@
+extends prefer_layout 
+
+block style
+    style.
+        body {
+            background-color: rgb(182,182,182);
+        }
+        #color_select {
+            margin-top: 70px;
+            padding: 20px;
+        }
+        #p_color_btn {
+            width: 70px;
+            height: 50px;
+            margin:40px 40px 10px 10px;
+            border-radius: 5px;
+            border: solid 1px #828282;
+            box-shadow: 0px 3px 3px rgb(43, 43, 43);
+        }
+
+block content
+    img#p_head(src='/images/head/pc_head.png', alt='')
+    #form_p
+        h3#p_text 마음에 드는 컬러를 선택해주세요!
+        #color_select
+            button#p_color_btn(style='background-color: black;')
+            button#p_color_btn(style='background-color: rgb(255, 255, 255);')
+            button#p_color_btn(style='background-color: rgb(255, 0, 0);')
+            button#p_color_btn(style='background-color: rgb(255, 123, 0);')
+            button#p_color_btn(style='background-color: rgb(255, 251, 0);')
+            br
+            br
+            button#p_color_btn(style='background-color: rgb(21, 255, 0);')
+            button#p_color_btn(style='background-color: rgb(0, 26, 255);')
+            button#p_color_btn(style='background-color: rgb(18, 0, 85);')
+            button#p_color_btn(style='background-color: rgb(183, 0, 255);')
+            button#p_color_btn(style='background-color: rgb(255, 172, 172);')
+    button#p_btn.btn.btn-outline-dark(type='submit', onclick="location.href='preferstyle'") 확인
