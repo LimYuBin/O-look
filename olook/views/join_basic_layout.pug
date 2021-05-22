@@ -1,0 +1,30 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(rel='stylesheet', href='/stylesheets/join_basic_layout.css')
+  link(rel='stylesheet', href='/stylesheets/join.css')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x', crossorigin='anonymous')
+  title Join Basic
+
+.base
+  #primary
+    #index
+      #basic_info 기본
+      #profile_info 프로필
+  #content
+    #head
+      //-프로필 기본 정보 폼의 head 이미지는 profile_head.png
+      img#p_head(src="/images/basic_head.png", alt="")
+    #form
+        block content
+        text#next_text 프로필 정보
+        button#next_btn
+          img(src="/images/right_arrow.png", alt="")
+  #secondary
+script.
+  window.onload = () => {
+  if (new URL(location.href).searchParams.get('error')) {
+  alert('이미 존재하는 이메일입니다.');
+  }
+  };

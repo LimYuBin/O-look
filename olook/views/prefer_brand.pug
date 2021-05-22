@@ -1,0 +1,19 @@
+extends prefer_layout
+
+block style
+    style.
+        body {
+            background-color: rgb(182,182,182);
+        }
+
+block content
+    img#p_head(src="/images/head/pb_head.png", alt="")
+    #form_p
+        h3#p_text 브랜드 이름을 입력하세요!!
+        br
+        #brand_search
+            .searchbox
+                input#value(onkeyup='filter()', type='text', placeholder='브랜드 이름을 입력하세요', method='POST', style='width: 300px;')
+                
+    .header
+        button#p_btn.btn.btn-outline-dark(type='submit', onclick="location.href='pricerange'") 확인

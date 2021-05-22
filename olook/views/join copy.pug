@@ -1,0 +1,36 @@
+extends join_basic_layout
+block content
+  .timeline
+    form#join-form.form-floating(action='/auth/join' method='post')
+      input#join-id.form-control(type='login_id' name = 'login_id')
+      label(for='floatingInputValue') 아이디 
+    form#join-form.form-floating(action='/auth/join' method='post')
+      input#join-password.form-control(type='password' name = 'password')
+      label(for='floatingInputValue') 비밀번호
+    form#join-form.form-floating(action='/auth/join' method='post')
+      input#join-nick.form-control(type='text' name = 'password')
+      label(for='floatingInputValue') 닉네임
+    form#join-form.form-floating(action='/auth/join' method='post')
+      input#join-email.form-control(type='email' name = 'email' )
+      label(for='floatingInputValue') 이메일
+      //- .input-group
+      //-   label(for='join-id') 아이디
+      //-   input#join-email(type='login_id' name='login_id')
+      //- .input-group
+      //-   label(for='join-password') 비밀번호
+      //-   input#join-password(type='password' name='password')
+      //- .input-group
+      //-   label(for='join-nick') 닉네임
+      //-   input#join-nick(type='text' name='nick')
+      //- .input-group
+      //-   label(for='join-email') 이메일
+      //-   input#join-email(type='text' name='email')
+      button#join-btn.btn.btn-dark(type='submit') 회원가입
+  //- endblock
+//- block script
+//- script.
+//-   window.onload = () => {
+//-   if (new URL(location.href).searchParams.get('error')) {
+//-   alert('이미 존재하는 이메일입니다.');
+//-   }
+//-   };
