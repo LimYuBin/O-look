@@ -1,0 +1,25 @@
+doctype html
+html
+    include navbar.pug
+
+.primary
+    .sidebar
+        .d-flex.flex-column.flex-shrink-0.p-3.text-white.bg-dark(style='width: 280px;')
+            a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.text-white.text-decoration-none(href='/')
+                span.fs-4 My page
+            hr
+            ul.nav.nav-pills.flex-column.mb-auto
+                li.nav-item
+                    a.nav-link.text-white(href='#', aria-current='page')
+                        |           회원정보 수정
+                li
+                    a.nav-link.text-white(href='/zzim')
+                        |           찜목록
+                li
+                    a.nav-link.text-white(href='https://www.musinsa.com/' target='_blank')
+                        |           무신사 바로가기
+
+
+.content
+
+include main_footer.pug
