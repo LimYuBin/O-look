@@ -1,0 +1,15 @@
+doctype html
+html
+  include navbar.pug
+
+.primary
+.content
+    #zzimBox 
+      for zzim in zzims
+        .items #{zzim.item_id}
+
+
+include main_footer.pug
+
+script(src='https://unpkg.com/axios/dist/axios.min.js')
+script(src='/zzim.js')
