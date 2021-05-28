@@ -1,0 +1,70 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x', crossorigin='anonymous')
+  link(rel='stylesheet', href='/stylesheets/join_profile_layout.css')
+  //- profile1의 css 추가
+  link(rel='stylesheet', href='/stylesheets/profile1.css')
+  title Join Profile
+
+.base
+  #primary
+    #index
+      #basic_info 기본
+      #profile_info 프로필
+  #content
+    #head
+      //-프로필 기본 정보 폼의 head 이미지는 profile_head.png
+      img#p_head(src="/images/profile_head.png", alt="")
+    #form
+        div
+        form#user-form
+            br
+            br
+            br
+            //-성별 input
+            span 성별
+            label
+            | 남   
+            input#man(type='radio' name='user_gender' value='남' checked='')
+            label#woman2
+            | 여 
+            input#woman(type='radio' name='user_gender' value='여')
+            br
+            br
+            br
+            br
+            //-직업 input
+            span 직업
+            input#job_title(type='text' list='career' placeholder='직업을 선택하세요')
+            datalist#career
+                option(value='학생')
+                option(value='회사원')
+            br
+            br
+            br
+            br
+            //-나이 input
+            span 나이
+            input#user_age(type='text' placeholder='나이를 입력하세요')
+            br
+            br
+            br
+            br
+            //-키 input
+            span 키
+            input#user_height(type='text' placeholder='키를 입력하세요')
+            span 몸무게
+            input#user_weight(type='text' placeholder='몸무게를 입력하세요')
+            br
+            br
+            br
+            br
+            br
+            //- 회원가입 버튼
+            #to_welcome_page
+                button#join.btn.btn-dark(type='submit') 회원가입
+  #secondary
+  script(src='https://unpkg.com/axios/dist/axios.min.js')
+  script(src='/sequelize.js')
