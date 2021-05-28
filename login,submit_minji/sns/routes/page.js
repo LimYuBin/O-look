@@ -1,7 +1,7 @@
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
-const { Post, User, Hashtag } = require('../models');
-
+// const { Post, User, Hashtag } = require('../models');
+const { User } = require('../models');
 const router = express.Router();
 
 router.use((req, res, next) => {
@@ -22,22 +22,40 @@ router.get('/join', isNotLoggedIn, (req, res) => {
 
 router.get('/', async (req, res, next) => {
   try {
-    const posts = await Post.findAll({
-      include: {
-        model: User,
-        attributes: ['id', 'nick'],
-      },
-      order: [['createdAt', 'DESC']],
-    });
-    res.render('main', {
+    // const posts = await Post.findAll({
+    //   include: {
+    //     model: User,
+    //     attributes: ['id', 'nick'],
+    //   },
+    //   order: [['createdAt', 'DESC']],
+    // });
+    res.render('main_', {
       title: 'NodeBird',
-      twits: posts,
+      //twits: posts,
     });
   } catch (err) {
     console.error(err);
     next(err);
   }
 });
+// router.get('/', async (req, res, next) => {
+//   try {
+//     const posts = await Post.findAll({
+//       include: {
+//         model: User,
+//         attributes: ['id', 'nick'],
+//       },
+//       order: [['createdAt', 'DESC']],
+//     });
+//     res.render('main_', {
+//       title: 'NodeBird',
+//       twits: posts,
+//     });
+//   } catch (err) {
+//     console.error(err);
+//     next(err);
+//   }
+// });
 
 router.get('/hashtag', async (req, res, next) => {
   const query = req.query.hashtag;

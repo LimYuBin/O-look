@@ -20,7 +20,8 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
       email,
       password: hash,
     });
-    return res.redirect('/');
+    // return res.redirect('/');
+    return res.render('profile/prefer');
   } catch (error) {
     console.error(error);
     return next(error);

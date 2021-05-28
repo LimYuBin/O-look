@@ -23,7 +23,7 @@ module.exports = class Post extends Sequelize.Model {
     });
   }
 
-  static associate(db) {
-    db.Post.belongsTo(db.User); //foriengkey, targetkey 적지 않아도 자동으로 belongsto 라고 쓴 쪽의 모델에 UserId 칼럼이 생기고 foriegn key가 된다.
-  }
+  // static associate(db) {
+  //   db.Post.belongsTo(db.User); //foriengkey, targetkey 적지 않아도 자동으로 belongsto 라고 쓴 쪽의 모델에 UserId 칼럼이 생기고 foriegn key가 된다.
+  // }
 };
