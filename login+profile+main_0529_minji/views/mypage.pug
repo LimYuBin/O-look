@@ -20,43 +20,42 @@ body
                         a.nav-link.text-white(href='https://www.musinsa.com/' target='_blank')
                             |           무신사 바로가기
 
-
     .content
-        #user-form
+    form(method = 'post' id='content')
+        #user-forms
             .gender
                 span 성별
-                label
-                | 남   
-                input#man.form-check-input(type='radio' name='user_gender' value='남' checked='')
-                label#woman2
-                | 여 
-                input#woman.form-check-input(type='radio' name='user_gender' value='여')
+                input#user_gender(type='text' placeholder='성별을 입력하세요', value = `${profiles.user_gender}`)
+                //- label
+                //- | 남
+                //- input#man.form-check-input(type='radio' name='user_gender' value='남')
+                //- label#woman2
+                //- | 여 
+                //- input#woman.form-check-input(type='radio' name='user_gender' value='여')
             .job
                 span 직업
-                input#job_title(type='text' list='career' placeholder='직업을 선택하세요')
+                input#job_title(type='text' list='career' placeholder='직업을 선택하세요' value = `${profiles.job_title}`)
                 datalist#career
                     option(value='학생')
                     option(value='회사원')
             .age
                 span 나이
-                input#user_age(type='text' placeholder='나이를 입력하세요')
+                input#user_age(type='text' placeholder='나이를 입력하세요' value = `${profiles.user_age}`)
             .height_weight
                 span 키
-                input#user_height(type='text' placeholder='키를 입력하세요')
+                input#user_height(type='text' placeholder='키를 입력하세요' value = `${profiles.user_height}`)
                 span 몸무게
-                input#user_weight(type='text' placeholder='몸무게를 입력하세요')
-
-        #prefer
-
-            ul#myTab.nav.nav-tabs(role='tablist')
-                li.nav-item(role='presentation')
-                    button#color-tab.nav-link.active(onclick='toColor()') 선호컬러
-                li.nav-item(role='presentation')
-                    button#style-tab.nav-link(onclick='toStyle()') 선호스타일
-                li.nav-item(role='presentation')
-                    button#brand-tab.nav-link(onclick='toBrand()') 선호브랜드
-                li.nav-item(role='presentation')
-                    button#price-tab.nav-link(onclick='toPrice()') 선호가격대
+                input#user_weight(type='text' placeholder='몸무게를 입력하세요' value = `${profiles.user_weight}`)
+            #prefer
+                ul#myTab.nav.nav-tabs(role='tablist')
+                    li.nav-item(role='presentation')
+                        a#color-tab.nav-link.active(onclick='toColor()') 선호컬러
+                    li.nav-item(role='presentation')
+                        a#style-tab.nav-link(onclick='toStyle()') 선호스타일
+                    li.nav-item(role='presentation')
+                        a#brand-tab.nav-link(onclick='toBrand()') 선호브랜드
+                    li.nav-item(role='presentation')
+                        a#price-tab.nav-link(onclick='toPrice()') 선호가격대
 
             #myTabContent.tab-content
                 #color_select.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
@@ -168,8 +167,6 @@ body
                             | 100,000 ~
 
         .submitBtn
-            button#join.btn.btn-dark(type='submit') 완료
-
-
-
-script(src='/mypage.js')
+            button#submit_total.btn.btn-dark(type='submit') 완료
+            script(src="https://unpkg.com/axios/dist/axios.min.js")
+            script(src='/mypage.js')

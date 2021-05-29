@@ -2,6 +2,7 @@ const e = require('express');
 const express = require('express');
 const Profile = require('../models/profile');
 const Zzim = require('../models/zzim');
+const User = require('../models/user');
 
 const router = express.Router();
 
@@ -72,8 +73,14 @@ router.get('/zzim', async (req,res,next) => {
 
 router.get('/mypage', async (req,res,next) => {
   try {
-    const profiles = await Profile.findAll();
-    res.render('mypage', { profiles });
+    const profiles = await Profile.findOne({ where : { login_id : req.user.login_id}})
+    const users = await User.findOne({ where : { id : req.user.login_id}})
+    console.log(profiles)
+    // res.render('mypage', { profiles });
+    res.render('mypage', {
+      contents : users,
+      profiles : profiles,
+    });
   } catch (err) {
     console.error(err);
     next(err);
