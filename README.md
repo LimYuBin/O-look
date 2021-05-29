@@ -42,7 +42,7 @@
 3. Hybird
     - Collaborative Filtering + Content Based
 
-4.알고리즘 평가 방법
+4. 알고리즘 평가 방법
 
 ## <웹 개발>
 UI 설계  
