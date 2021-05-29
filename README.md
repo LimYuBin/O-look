@@ -17,6 +17,7 @@
     - 무신사(온라인 패션 플랫폼) 데이터 scraping
     - Selenium Library
     - Fashion Data
+    ![Fashion Data] (./img/Fashion_Data_1.png)
     - User & Review Data
 2. 데이터셋 구축 프로세스 
 3. 최종 데이터셋
