@@ -1,0 +1,35 @@
+doctype html
+html
+  include main_header.pug
+
+body
+  .content
+    if user_name
+      .user_name #{user_name}  님에게 추천드립니다!
+    .box1
+      for main in mains
+        .wrap
+          .item
+            img(src= main.img, alt='')
+            figcaption
+              h3 #{main.brand}
+              p #{main.title}
+              p 좋아요: #{main.like_cnt}
+            a(href=main.item_url target='_blank')
+          button.zzimBtn(onclick='zzimBtnFill()')
+            img#heart(src="/images/icon/zzim.png", alt="" width='20px')
+
+    span.text 인기있는 옷
+
+    .box2
+      .item
+        button.zzimBtn(onclick='zzimBtnFill()')
+          img#heart(src="/images/icon/zzim.png", alt="" width='20px')
+
+    a.toTop(href='#')
+      img.toTopImg(src="/images/icon/top.png", alt="" width='32px')
+
+include main_footer.pug
+
+script(src='https://unpkg.com/axios/dist/axios.min.js')
+script(src='/zzim.js')
