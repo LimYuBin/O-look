@@ -1,0 +1,23 @@
+doctype html
+html
+  include navbar.pug
+
+.content
+  if user_name
+    .user_name #{user_name} 님 안녕하세요!
+    br
+    span.desc 아이템을 클릭하면 상세페이지로 연결됩니다
+  #zzimBox 
+    for zzim in zzims
+          
+      figure.item
+        img(src= zzim.img, alt='')
+        figcaption
+          h3 #{zzim.brand}
+          p #{zzim.title}
+        a(href=zzim.item_url target='_blank')
+
+include main_footer.pug
+
+script(src='https://unpkg.com/axios/dist/axios.min.js')
+script(src='/zzim.js')
