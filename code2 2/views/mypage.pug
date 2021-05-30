@@ -1,0 +1,178 @@
+doctype html
+html
+    include navbar.pug
+
+body
+    .primary
+        .sidebar
+            .d-flex.flex-column.flex-shrink-0.p-3.text-white.bg-dark(style='width: 280px;')
+                a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.text-white.text-decoration-none(href='/')
+                    span.fs-4 My page
+                hr
+                ul.nav.nav-pills.flex-column.mb-auto
+                    li.nav-item
+                        a.nav-link.text-white(href='#', aria-current='page')
+                            |           회원정보 수정
+                    li
+                        a.nav-link.text-white(href='/prefer/zzim')
+                            |           찜목록
+                    li
+                        a.nav-link.text-white(href='https://www.musinsa.com/' target='_blank')
+                            |           무신사 바로가기
+
+
+    .content#mypagecontent
+
+        if user_name
+            .user_name #{user_name} 님 안녕하세요!
+        #user-form
+            .gender
+                span 성별
+                label
+                | 남   
+                input#man.form-check-input(type='radio' name='user_gender' value='남' checked='')
+                label#woman2
+                | 여 
+                input#woman.form-check-input(type='radio' name='user_gender' value='여')
+            .job
+                span 직업
+                input#job_title(type='text' list='career' placeholder='직업을 선택하세요')
+                datalist#career
+                    option(value='학생')
+                    option(value='회사원')
+            .age
+                span 나이
+                input#user_age(type='text' placeholder='나이를 입력하세요')
+            .height_weight
+                span 키
+                input#user_height(type='text' placeholder='키를 입력하세요')
+                span 몸무게
+                input#user_weight(type='text' placeholder='몸무게를 입력하세요')
+
+        #prefer
+
+            ul#myTab.nav.nav-tabs(role='tablist')
+                li.nav-item(role='presentation')
+                    button#color-tab.nav-link.active(onclick='toColor()') 선호컬러
+                li.nav-item(role='presentation')
+                    button#style-tab.nav-link(onclick='toStyle()') 선호스타일
+                li.nav-item(role='presentation')
+                    button#brand-tab.nav-link(onclick='toBrand()') 선호브랜드
+                li.nav-item(role='presentation')
+                    button#price-tab.nav-link(onclick='toPrice()') 선호가격대
+
+            #myTabContent.tab-content
+                #color_select.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+                    span.des 마음에 드는 컬러를 선택해주세요!
+                    .colors 
+                        .form-check
+                            input#flexCheckDefault.form-check-input(name='color' type='checkbox', value='black' checked='')
+                            label.form-check-label(for='flexCheckDefault')
+                            #color_img
+                                img(src="/images/color/black.png", alt="")
+                        .form-check
+                            input#flexCheckChecked.form-check-input(name='color' type='checkbox', value='white')
+                            label.form-check-label(for='flexCheckChecked')
+                            #color_img  
+                                img(src="/images/color/white.png", alt="")
+                        .form-check
+                            input#flexCheckChecked.form-check-input(name='color' type='checkbox', value='red')
+                            label.form-check-label(for='flexCheckChecked')
+                            #color_img  
+                                img(src="/images/color/red.png", alt="")
+                        .form-check
+                            input#flexCheckChecked.form-check-input(name='color' type='checkbox', value='orange')
+                            label.form-check-label(for='flexCheckChecked')
+                            #color_img  
+                                img(src="/images/color/orange.png", alt="")
+                        .form-check
+                            input#flexCheckChecked.form-check-input(name='color' type='checkbox', value='yellow')
+                            label.form-check-label(for='flexCheckChecked')
+                            #color_img
+                                img(src="/images/color/yellow.png", alt="")
+
+                        .form-check
+                            input#flexCheckChecked.form-check-input(name='color' type='checkbox', value='green')
+                            label.form-check-label(for='flexCheckChecked')
+                            #color_img
+                                img(src="/images/color/green.png", alt="")
+                        .form-check
+                            input#flexCheckChecked.form-check-input(name='color' type='checkbox', value='blue')
+                            label.form-check-label(for='flexCheckChecked')
+                            #color_img 
+                                img(src="/images/color/blue.png", alt="")
+                        .form-check
+                            input#flexCheckChecked.form-check-input(name='color' type='checkbox', value='navy')
+                            label.form-check-label(for='flexCheckChecked')
+                            #color_img  
+                                img(src="/images/color/navy.png", alt="")
+                        .form-check
+                            input#flexCheckChecked.form-check-input(name='color' type='checkbox', value='purple')
+                            label.form-check-label(for='flexCheckChecked')
+                            #color_img  
+                                img(src="/images/color/purple.png", alt="")
+                        .form-check
+                            input#flexCheckChecked.form-check-input(name='color' type='checkbox', value='pink')
+                            label.form-check-label(for='flexCheckChecked')
+                            #color_img  
+                                img(src="/images/color/pink.png", alt="")
+                #style_select.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
+                    span.des 마음에 드는 스타일을 선택해주세요!
+                    .styles
+                        .form-check#styleform
+                            input#flexRadioDefault1.form-check-input(type='radio' name='style' checked='' value='casual')
+                            label.form-check-label(id='style_label' for='flexRadioDefault1')
+                            img(src='/images/casual.png', alt='', width='230px', height='140px')
+                            p 캐주얼/심플
+                            
+                        .form-check#styleform
+                            input#flexRadioDefault2.form-check-input(type='radio' name='style' value='training')
+                            label.form-check-label(id='style_label' for='flexRadioDefault2')
+                            img(src='/images/training.jpg', alt='', width='230px', height='140px')
+                            p 트레이닝
+
+                        .form-check#styleform
+                            input#flexRadioDefault3.form-check-input(type='radio' name='style' value='unique')
+                            label.form-check-label(id='style_label' for='flexRadioDefault2')
+                            img(src='/images/unique.jpg', alt='', width='230px', height='140px')
+                            p 유니크
+                            
+                        .form-check#styleform
+                            input#flexRadioDefault4.form-check-input(type='radio' name='style' value='lovely')
+                            label.form-check-label(id='style_label' for='flexRadioDefault2')
+                            img(src='/images/lovely.jpg', alt='', width='230px', height='140px')
+                            p 러블리
+                #brand_search.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab')
+                    span.des 브랜드 이름을 입력해주세요!
+                    .brands
+                        .searchbox
+                            input#brand(type='text' placeholder='브랜드 이름을 입력하세요' name='brandName' style='width: 300px;')                 
+                #pricepick.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab')
+                    span.des 가격대를 선택해주세요!
+                    .price
+                        .form-check
+                            input#flexRadioDefault1.form-check-input(type='radio' name='price' checked='' value='저렴')
+                            label.form-check-label(id='price_label' for='flexRadioDefault1')
+                            | 0 ~ 30,000
+                            
+                        .form-check
+                            input#flexRadioDefault2.form-check-input(type='radio' name='price' value='보통')
+                            label.form-check-label(id='price_label' for='flexRadioDefault2')
+                            | 30,000 ~ 50,000
+
+                        .form-check
+                            input#flexRadioDefault3.form-check-input(type='radio' name='price' value='조금 비쌈')
+                            label.form-check-label(id='price_label' for='flexRadioDefault2')
+                            | 50,000 ~ 100,000
+                            
+                        .form-check
+                            input#flexRadioDefault4.form-check-input(type='radio' name='price' value='비쌈')
+                            label.form-check-label(id='price_label' for='flexRadioDefault2')
+                            | 100,000 ~
+
+        .submitBtn
+            button#join.btn.btn-dark(type='submit') 완료
+
+
+
+script(src='/mypage.js')
