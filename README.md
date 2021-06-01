@@ -22,7 +22,7 @@
 * EDA 
     - EDA : https://www.notion.so/EDA-61cf9cbf34ad4387be79b7ca1a90ca21
 * ERD  
-![ERD](./img/ERD.PNG)
+![ERD](./img/중복제거ERD.PNG)
 
 
 ## <사용 알고리즘>
