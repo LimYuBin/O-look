@@ -61,7 +61,8 @@ https://www.figma.com/file/3OxoDhJtMDWrTDgsEFQLix/오늘의-룩?node-id=113%3A2
 
 ----------
 # 결과물
-
+진행시 사용했던 notion의 일부를 공유합니다.
+https://www.notion.so/17d5aede1ade4f9dbab130a054e86eaa
 
 ------------
 # 개발하면서 느낀 점
