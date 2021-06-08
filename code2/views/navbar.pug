@@ -1,0 +1,21 @@
+head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x', crossorigin='anonymous')
+    link(rel='stylesheet', href='/stylesheets/navbar.css')
+    script(src='https://unpkg.com/axios/dist/axios.min.js')
+    script(src='http://code.jquery.com/jquery-latest.js')
+    title Zzim
+
+
+header
+    nav.navbar.navbar-dark.bg-dark
+        .container-fluid
+            a.navbar-brand(href='/prefer/main') O-Look
+            .navbar-nav
+                a.nav-link.active#mypageText(aria-current='page', href='/prefer/mypage') My page
+                a.nav-link.active(href='/prefer/zzim') 찜 목록
+                a.nav-link.active(href='/auth/logout') 로그아웃
+
+    
+    
