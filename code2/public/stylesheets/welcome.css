@@ -1,0 +1,22 @@
+body {
+    background-image: url('../images/welcomebg.png');
+    background-size: cover;
+    text-align: center;
+}
+
+.welcome {
+    height: 200px;
+    line-height: 100px;
+    margin-top: 300px;
+}
+
+.text2, .text3 {
+    font-size: 30px;
+    color: white;
+}
+
+.text1 {
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+}

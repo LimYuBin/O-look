@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(182, 182, 182);
+}
+
+#primary {
+    float: left;
+    width: 10%;
+    height: 900px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#content {
+    text-align: center;
+    float: left;
+    width: 80%;
+    height: 900px;
+    background-color: rgb(255, 255, 255);
+}
+
+#p_head {
+    margin-top: 30px;
+    width: 70%;
+    height: 180px;
+}
+
+#p_text {
+    size: 20px;
+    margin-top: 80px;
+}
+
+#form_p {
+    width: 70%;
+    height: 600px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+#color_select {
+    margin-top: 70px;
+    padding: 20px;
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 10px;
+}
+
+#color_img {
+    width: fit-content;
+    height: fit-content;
+}
+
+#style_select {
+    margin-top: 70px;
+    padding: 20px;
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 10px;
+}
+
+#brand_search {
+    margin-top: 70px;
+    padding: 20px;
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 10px;
+}
+
+#p_btn {
+    margin-top: 20px;
+}
+
+#secondary {
+    float: left;
+    width: 10%;
+    height: 900px;
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.prefer {
+    max-width: auto;
+    height: 920px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#pricepick {
+    margin-top: 70px;
+    padding: 20px;
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 10px;
+}
+
+label{
+    display:inline-block;
+}
