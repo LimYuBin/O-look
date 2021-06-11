@@ -66,7 +66,7 @@ https://www.notion.so/17d5aede1ade4f9dbab130a054e86eaa
 
 ------------
 # 웹페이지 링크
-https://project-olook.herokuapp.com/
+http://project-olook.herokuapp.com/
 
 ------------
 # 개발하면서 느낀 점
