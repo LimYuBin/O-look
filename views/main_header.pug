@@ -1,0 +1,32 @@
+head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x', crossorigin='anonymous')
+    link(rel='stylesheet', href='/stylesheets/main_layout.css')
+    title Main
+
+header
+    .navItem1
+        a(href="/prefer/main") 
+            h2 O-Look
+
+    .navItem2
+        button.mypage(onclick="location.href='/prefer/dash'")
+            img(src="/images/icon/dashboard.png", alt="")
+            br
+            span.smallText Dash Board
+
+        button.mypage(onclick="location.href='/prefer/mypage'")
+            img(src="/images/icon/mypage.png", alt="")
+            br
+            span.smallText 마이페이지
+        
+        button.zzim(onclick="location.href='/prefer/zzim'")
+            img(src="/images/icon/zzim.png", alt="")
+            br
+            span.smallText 찜 목록
+
+        button.logout(onclick="location.href='/auth/logout'")
+            img(src="/images/icon/logout.png", alt="")
+            br
+            span.smallText 로그아웃
