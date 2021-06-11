@@ -18,7 +18,6 @@ const pageRouter = require('./routes/page')
 const app = express();
 passportConfig(); // 패스포트 설정
 
-app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
