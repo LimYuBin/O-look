@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "zoqtmxhs",
+    "database": "olook2",
+    "host": "database-1.cjfxmqen45tj.ap-northeast-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "zoqtmxhs",
+    "database": "olook2",
+    "host": "database-1.cjfxmqen45tj.ap-northeast-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "zoqtmxhs",
+    "database": "olook2",
+    "host": "database-1.cjfxmqen45tj.ap-northeast-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}
