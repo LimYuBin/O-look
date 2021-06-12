@@ -38,9 +38,12 @@
     - Collaborative Filtering + Content Based
 
 4. 추천 정확도를 높이기 위해 사용한 방법
+    - 분류분석 : https://www.notion.so/3927d630e01341d4a36eb754b9dfe56b
     - NLP : https://www.notion.so/NLP-89b6489079f14c7894307da85d3c9c1a
 
 5. 알고리즘 평가 방법
+    - recall@5, recall@10
+    - 관련 문서 : https://www.notion.so/a1059c33e7d143ed8cf4b17daf3321d4
 
 6. 추천시스템 관련 조사 & 스터디  
     - CF 조사 : https://www.notion.so/collaborative-Filtering-cee5ba2b95794be6a12c40caa0108335  
