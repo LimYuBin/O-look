@@ -73,4 +73,4 @@ http://project-olook.herokuapp.com/
 고승연 - 
 임유빈 -
 조현아 -
-최미지 - 
+최지 - 
