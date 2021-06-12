@@ -70,3 +70,7 @@ http://project-olook.herokuapp.com/
 
 ------------
 # 개발하면서 느낀 점
+고승연 - 
+임유빈 -
+조현아 -
+최미지 - 
